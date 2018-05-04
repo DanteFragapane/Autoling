@@ -1,0 +1,106 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "hydrabolt/discord.js",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "hydrabolt/discord.js",
+        "spec": "github:hydrabolt/discord.js",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:hydrabolt/discord.js.git",
+          "sshUrl": "git+ssh://git@github.com/hydrabolt/discord.js.git",
+          "httpsUrl": "git+https://github.com/hydrabolt/discord.js.git",
+          "gitUrl": "git://github.com/hydrabolt/discord.js.git",
+          "shortcut": "github:hydrabolt/discord.js",
+          "directUrl": "https://raw.githubusercontent.com/hydrabolt/discord.js/master/package.json"
+        }
+      },
+      "C:\\myBot"
+    ]
+  ],
+  "_from": "hydrabolt/discord.js",
+  "_id": "discord.js@10.0.1",
+  "_inCache": true,
+  "_location": "/discord.js",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "hydrabolt/discord.js",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "hydrabolt/discord.js",
+    "spec": "github:hydrabolt/discord.js",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:hydrabolt/discord.js.git",
+      "sshUrl": "git+ssh://git@github.com/hydrabolt/discord.js.git",
+      "httpsUrl": "git+https://github.com/hydrabolt/discord.js.git",
+      "gitUrl": "git://github.com/hydrabolt/discord.js.git",
+      "shortcut": "github:hydrabolt/discord.js",
+      "directUrl": "https://raw.githubusercontent.com/hydrabolt/discord.js/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "git://github.com/hydrabolt/discord.js.git#c02eb2f171c958a8386e3e29798080f0fe1108d8",
+  "_shasum": "e53f17273f91d6f6ad17c6d31e1062afad5380cb",
+  "_shrinkwrap": null,
+  "_spec": "hydrabolt/discord.js",
+  "_where": "C:\\myBot",
+  "author": {
+    "name": "Amish Shah",
+    "email": "amishshah.2k@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/hydrabolt/discord.js/issues"
+  },
+  "dependencies": {
+    "superagent": "^2.3.0",
+    "tweetnacl": "^0.14.3",
+    "ws": "^1.1.1"
+  },
+  "description": "A powerful library for interacting with the Discord API",
+  "devDependencies": {
+    "eslint": "^3.8.0",
+    "fs-extra": "^0.30.0",
+    "jsdoc-to-markdown": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "gitHead": "c02eb2f171c958a8386e3e29798080f0fe1108d8",
+  "homepage": "https://github.com/hydrabolt/discord.js#readme",
+  "keywords": [
+    "discord",
+    "api",
+    "bot",
+    "client",
+    "node",
+    "discordapp"
+  ],
+  "license": "Apache-2.0",
+  "main": "./src/index",
+  "name": "discord.js",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "node-opus": "^0.2.1",
+    "opusscript": "^0.0.1"
+  },
+  "readme": "<div align=\"center\">\r\n  <p>\r\n    <a href=\"https://discord.js.org\"><img src=\"https://i.imgur.com/StEGtEh.png\" width=\"546\" alt=\"discord.js\" /></a>\r\n  </p>\r\n  <p>\r\n    <a href=\"https://discord.gg/bRCvFy9\"><img src=\"https://discordapp.com/api/guilds/222078108977594368/embed.png\" alt=\"Discord server\" /></a>\r\n    <a href=\"https://www.npmjs.com/package/discord.js\"><img src=\"https://img.shields.io/npm/v/discord.js.svg?maxAge=3600\" alt=\"NPM version\" /></a>\r\n    <a href=\"https://www.npmjs.com/package/discord.js\"><img src=\"https://img.shields.io/npm/dt/discord.js.svg?maxAge=3600\" alt=\"NPM downloads\" /></a>\r\n    <a href=\"https://travis-ci.org/hydrabolt/discord.js\"><img src=\"https://travis-ci.org/hydrabolt/discord.js.svg\" alt=\"Build status\" /></a>\r\n    <a href=\"https://david-dm.org/hydrabolt/discord.js\"><img src=\"https://img.shields.io/david/hydrabolt/discord.js.svg?maxAge=3600\" alt=\"Dependencies\" /></a>\r\n  </p>\r\n  <p>\r\n    <a href=\"https://nodei.co/npm/discord.js/\"><img src=\"https://nodei.co/npm/discord.js.png?downloads=true&stars=true\" alt=\"NPM info\" /></a>\r\n  </p>\r\n</div>\r\n\r\n## About\r\ndiscord.js is a powerful node.js module that allows you to interact with the [Discord API](https://discordapp.com/developers/docs/intro) very easily.\r\nIt takes a much more object-oriented approach than most other JS Discord libraries, making your bot's code significantly tidier and easier to comprehend.\r\nUsability and performance are key focuses of discord.js. It also has nearly 100% coverage of the Discord API.\r\n\r\n## Installation\r\n**Node.js 6.0.0 or newer is required.**\r\n\r\nWithout voice support: `npm install discord.js --save`  \r\nWith voice support ([node-opus](https://www.npmjs.com/package/node-opus)): `npm install discord.js node-opus --save`  \r\nWith voice support ([opusscript](https://www.npmjs.com/package/opusscript)): `npm install discord.js opusscript --save`\r\n\r\nThe preferred audio engine is node-opus, as it performs significantly better than opusscript. When both are available, discord.js will automatically choose node-opus.\r\nUsing opusscript is only recommended for development on Windows, since getting node-opus to build there can be a bit of a challenge.\r\nFor production bots, using node-opus should be considered a necessity, especially if they're going to be running on multiple servers.\r\n\r\n## Example Usage\r\n```js\r\nconst Discord = require('discord.js');\r\nconst client = new Discord.Client();\r\n\r\nclient.on('ready', () => {\r\n  console.log('I am ready!');\r\n});\r\n\r\nclient.on('message', message => {\r\n  if (message.content === 'ping') {\r\n    message.reply('pong');\r\n  }\r\n});\r\n\r\nclient.login('your token');\r\n```\r\n\r\nA bot template using discord.js can be generated using [generator-discordbot](https://www.npmjs.com/package/generator-discordbot).\r\n\r\n## Links\r\n* [Website](http://discord.js.org/)\r\n* [Discord.js server](https://discord.gg/bRCvFy9)\r\n* [Discord API server](https://discord.gg/rV4BwdK)\r\n* [Documentation](http://discord.js.org/#!/docs)\r\n* [Legacy (v8) documentation](http://discordjs.readthedocs.io/en/8.2.0/docs_client.html)\r\n* [Examples](https://github.com/hydrabolt/discord.js/tree/master/docs/custom/examples)\r\n* [GitHub](https://github.com/hydrabolt/discord.js)\r\n* [NPM](https://www.npmjs.com/package/discord.js)\r\n* [Related libraries](https://discordapi.com/unofficial/libs.html)\r\n\r\n## Contributing\r\nBefore creating an issue, please ensure that it hasn't already been reported/suggested, and double-check the\r\n[documentation](http://discord.js.org/#!/docs).  \r\nSee [the contributing guide](CONTRIBUTING.md) if you'd like to submit a PR.\r\n\r\n## Help\r\nIf you don't understand something in the documentation, you are experiencing problems, or you just need a gentle\r\nnudge in the right direction, please don't hesitate to join our official [Discord.js Server](https://discord.gg/bRCvFy9).\r\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hydrabolt/discord.js.git"
+  },
+  "scripts": {
+    "docs": "node docs/generator/generator.js",
+    "test": "eslint src/ && node docs/generator/generator.js silent"
+  },
+  "version": "10.0.1"
+}
